@@ -1,0 +1,202 @@
+
+
+/*By myself*/
+@font-face {
+  font-family: 'Roboto';
+  src:  url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:  url('../fonts/Roboto-Medium.woff') format('woff'),
+        url('../fonts/Roboto-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:  url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:  url('../fonts/Roboto-Black.woff') format('woff'),
+        url('../fonts/Roboto-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  display: swap;
+}
+ 
+ * {
+  margin:0;
+  padding:0;
+
+  box-sizing: border-box;
+ }  
+
+ body {
+  font-family:'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+ }
+
+
+ .container {
+  max-width:1210px;
+  margin:0px auto;
+
+ }
+
+ ul, li {
+  list-style: none; /*specifies the style of list*/
+ }
+
+ a {
+  text-decoration: none;
+ }
+
+
+ header {
+  background-color: #f5f6f7;
+  height: 100vh;
+  position: relative;/*This is for placing the img to the header*/
+ }
+
+ .header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top:31px;
+ }
+
+ header::after { /*if you set a position:after to the 
+  specified element, it'll be positioned to the right side*/
+  content:" ";
+  width:793px;
+  height: 646px;
+
+  position: absolute; /*This absolute element is relative to the header element*/
+  right: 0;
+  bottom: 0;
+  background: url("../img/header-bg-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+/* 
+ header::before { 
+
+
+  ///if you set a position:before to the 
+  specified element, it'll be positioned to the left side///
+
+
+  content:" ";
+  width:793px;
+  height: 646px;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: url("../img/header-bg-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ } */
+
+
+ .header__navbar {
+  display: flex;
+  align-items: center;
+  gap: 43px;
+ }
+
+ .header__navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+ }
+
+ 
+ .header__navbar ul li a {
+  color: #0F2336;
+  font-size: 14px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  line-height: 16.80px;
+
+ }
+
+
+.header__navbar button {
+    color: white;
+  font-size: 14px;
+  font-family:'Roboto';
+  font-weight: 700;
+  line-height: 16.80px;
+
+  border-radius: 8px;
+  border:1px solid #0f2336;
+  background:#0f2336;
+  padding: 17px 26px;
+  cursor: pointer;
+}
+
+
+.h1-paragraph {
+  color: #0F2336;
+  font-size: 55px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  line-height: 75.90px;
+ 
+}
+
+.h1-paragraph span {
+  color: #00CCCC;
+}
+
+.h1-paragraph .dot-sign {
+  color:rgb(223, 223, 43);
+}
+
+.text-content {
+  margin-top:121px;
+}
+
+
+.text-content button {
+  color: #0F2336;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 21.60px;
+
+  border-radius: 14px;
+  border: 1px #00CCCC solid;
+  background: #00CCCC;
+  box-shadow: 0px 3px 18px rgba(0, 201, 201, 0.55);
+  padding: 19px 21px;
+  cursor: pointer;
+  
+  margin-top:50px;
+}  
+
+.text-content button img {
+  vertical-align:middle
+}
+
+
+
+
+
