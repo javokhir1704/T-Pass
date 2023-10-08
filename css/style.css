@@ -1,6 +1,6 @@
 
 
-/*By myself*/
+/*These font codes are helpful when the internet is switched off*/
 @font-face {
   font-family: 'Roboto';
   src:  url('../fonts/Roboto-Regular.woff') format('woff'),
@@ -52,8 +52,8 @@
 
 
  .container {
-  max-width:1210px;
-  margin:0px auto;
+  max-width:1210px; /*It can strech out up to 1210px and can go down*/
+  margin: 0 auto;
 
  }
 
@@ -68,8 +68,9 @@
 
  header {
   background-color: #f5f6f7;
-  height: 100vh;
-  position: relative;/*This is for placing the img to the header*/
+  height: 100vh; /*Header should be in 100vh unit*/
+
+  position:relative;/*This is for placing the img to the header*/
  }
 
  .header__wrapper {
@@ -80,7 +81,12 @@
  }
 
  header::after { /*if you set a position:after to the 
-  specified element, it'll be positioned to the right side*/
+  specified element, it'll be positioned to the right side.
+
+
+  after and before functions usually add an empty element according to the functions
+  for after, the empty element is gonna be after it and also the same the to the before
+   function*/
   content:" ";
   width:793px;
   height: 646px;
@@ -88,11 +94,28 @@
   position: absolute; /*This absolute element is relative to the header element*/
   right: 0;
   bottom: 0;
-  background: url("../img/header-bg-img.png");
+  background: url("../img/header-bg-img.png");/*	The "header-bg-img.png" file is located in the folder   one level up from the current folder*/
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  /* z-index:1; */
  }
+
+
+ /* header::before {
+  content:"" ;
+  width:200px;
+  height:200px;
+
+  position: absolute;
+  left:0;
+  top:0;
+  background: url('https://www.imgacademy.com/sites/default/files/styles/scale_1700w/public/2022-07/img-homepage-meta_0.jpg?itok=LMirU0Ik');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+
+ } */
 /* 
  header::before { 
 
@@ -152,14 +175,14 @@
   cursor: pointer;
 }
 
-
+/*Big text in header element*/
 .h1-paragraph {
   color: #0F2336;
   font-size: 55px;
   font-family: 'Roboto';
   font-weight: 700;
   line-height: 75.90px;
- 
+
 }
 
 .h1-paragraph span {
@@ -172,6 +195,9 @@
 
 .text-content {
   margin-top:121px;
+  /* position:absolute; 
+  top:199px; This is an alternative way of above style */
+ 
 }
 
 
@@ -193,8 +219,440 @@
 }  
 
 .text-content button img {
-  vertical-align:middle
+  vertical-align:middle; /*it will vertically align items*/
 }
+
+
+.info__cards {
+  display: flex;
+  align-items: center;
+  column-gap: 52px;
+
+  padding: 0px 37px 20px 15px;
+  margin:100px auto 40px;  
+}
+/* 
+.info__card{
+
+
+
+
+} */
+
+
+.info__card-icon{
+  background-color: rgb(0, 201, 201, 50%); /*50% means the opacity of this color*/
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  position: relative;
+ 
+  margin-bottom: 30px;
+}
+
+.info__card img{
+   /* display: flex; 
+  align-items: center;
+  justify-content: center; 
+  This is alternative way of styles below*/
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info__card h1 {
+   margin-bottom:12px;
+
+  color: #0F2336;
+  font-family: Roboto;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32.5px; /* 130% */
+}
+
+.info__card p {
+  color: #576D81;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+section.work{
+  /* position: relative; this is for position absolute img to section.work element */
+}
+
+
+.work-cards {
+  display: flex;
+  align-items: top;
+  justify-content: right;
+
+  border-radius: 50px;
+  background: #F4F5F6;
+  height: 540px;
+
+  margin:100px auto 220px;
+
+  position:relative;
+}
+.work-card-first{
+  position: absolute;
+  top: -50px;
+  left: 30px;
+}
+
+
+.work-card-second{
+ margin:115px 166px 97px 0px;
+}
+
+
+.work-card-second > span{
+  display: inline-block; /*For inline-block level elements, the margin and padding don't work. So that's why set this element to the block-level*/
+  color: #576D81;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+
+  margin-bottom:22px;
+}
+
+.work-card-second h1 {
+  color: #0F2336;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 55.2px; /* 138% */
+
+  margin-bottom:21px;
+}
+
+
+.work-card-second p {
+  color: #576D81;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+
+  margin-bottom:50px;
+}
+
+section.advantages {
+  background: #F4F5F6;
+  height: 527px;
+
+  position:relative; /* if it's a relative element and inside it has position:absolute; element, the absolute element is gonna be relative to the first "relative element "*/
+}
+
+
+section.advantages::after {
+  content: " ";
+  width: 595px;
+  height: 627px;
+
+  position:absolute ; /*to be relative to the section.advantages element*/
+  bottom:0;
+  right:170px;
+
+  background: url('../img/girl-with-phone.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.advantages-cards { /*Flex-box */
+  position: relative;
+  bottom:40px;
+}
+
+
+.advantages-card-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+
+  border-radius: 8px;
+  background: #F6F7F8;
+
+  position: relative;
+
+  margin:25px 0px 25px 25px;
+  /* vertical-align: top; */
+}
+
+.advantages-card-icon img {
+    /* display: flex; 
+  align-items: center;
+  justify-content: center; 
+  This is alternative way of styles below*/
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.advantages-card-text h2 {
+  color: #0F2336;
+  font-family: Roboto;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 100% */
+  letter-spacing: 0.2px;
+
+  margin-bottom: 25px;
+}
+
+.advantages-card-text p {
+  color: #576D81;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+
+.advantages-card-text { /*Div advantages-card-text*/
+  margin-top:38px;
+
+  /* vertical-align: top; */
+}
+
+
+
+.advantages-card {
+  width: 455px;
+  height: 179px;
+  flex-shrink: 0;
+
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 8px 32px 0px rgba(15, 35, 54, 0.06); /*it's for creating a shadow around a element*/
+
+  display:flex;
+  align-items: top;
+  column-gap: 23px;
+
+  margin-bottom:30px;
+}
+
+
+.margin-left-card {
+  margin-left:40px;
+}
+
+section.gifts-orders {
+  /* position:relative; this is for position absolute img to section.work element */
+}
+
+
+.gifts-orders-cards {
+  display: flex;
+  align-items: top;
+  
+  border-radius: 50px;
+  background: #F4F5F6;
+  height: 540px;
+ 
+  margin:150px auto 220px;
+  position:relative;
+}
+
+
+.gifts-orders-card-second {
+  position:absolute; /*To be relative to the section.gifts-orders element*/
+  top:-50px;
+  right:0;
+}
+
+
+.gifts-orders-card-first {
+  margin:127px 0px 0px 140px;
+}
+
+
+.gifts-orders-card-first span {
+  display: inline-block; /*For inline-block level elements, the margin and padding don't work. So that's why set this element to the block-level*/
+  color: #576D81;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+
+  margin-bottom:22px;
+}
+
+
+.gifts-orders-card-first h1 {
+  color: #0F2336;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 55.2px; /* 138% */
+
+  margin-bottom:21px;
+}
+
+
+.gifts-orders-card-first p {
+  color: #576D81;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+
+  margin-bottom:50px;
+}
+
+
+.enjoy-tea-snack-card {
+  text-align:center;
+  margin-bottom: 110px;
+}
+
+
+.enjoy-tea-snack-card > img { /*Do not specify the width and height of img because be default, it's donwloaded in specified width and height*/
+  margin-bottom: 23px;
+}
+
+
+.enjoy-tea-snack-card h1 {
+  color: #0F2336;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 60px; /* 120% */
+
+  margin-bottom:20px;
+}
+
+
+.input-button {
+  margin-bottom: 20px;
+}
+
+
+.input-button form input {
+  width: 394px;
+  height: 55px;
+
+  border-radius: 6px;
+  border: 1px solid #F0F0F2;
+  background: #F0F0F2;
+
+  margin-right:20px;
+}
+
+
+.input-button form input::placeholder { /*This pseudo-element is used to style the text of input element*/
+  color: rgba(0, 0, 0, 0.35);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21.6px; /* 120% */
+}
+
+
+.input-button form button {
+  width: 156px;
+  height: 55px;
+
+  border-radius: 14px;
+  border: 1px solid #0CC;
+  background: #0CC;
+
+  color: #0F2336;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21.6px; /* 120% */
+}
+
+
+.two-img {
+  margin:0 auto;
+  width:570px;
+
+  text-align: left;
+
+  display: flex;
+  column-gap: 24px;
+}
+
+
+footer {
+  /* width: 100%;
+  height:100%; */
+  background: #0F2336;
+}
+
+
+.footer-parent {
+  height: 142px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-top:200px;
+}
+
+
+.footer-child-right-card span {
+  display: inline-block; /*For inline-block level elements, the margin and padding don't work. So that's why set this element to the block-level*/
+  color: #0CC;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20.04px; /* 167% */
+  /* letter-spacing: 0.1px; */
+
+  margin-bottom:13px;
+}
+
+
+.footer-child-right-card p {
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.02px; /* 143% */
+  /* letter-spacing: 0.39px; */
+
+  margin-bottom: 5px;
+}
+
+
+.footer-child-right {
+  display: flex;
+  column-gap: 60px;
+}
+
 
 
 
