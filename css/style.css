@@ -608,16 +608,102 @@ footer {
   /* width: 100%;
   height:100%; */
   background: #0F2336;
+  padding: 55px 0px 100px;
+
+  position: relative;
+}
+
+
+footer::before {
+  content:" ";
+  width: 229.998px;
+  height: 296.687px;
+  
+
+  position:absolute;
+  left:0;
+  bottom:40px;
+  
+  background:url("../img/footer-left-leaf.svg");
+  background-repeat:no-repeat;
+  background-position: left;
+  /* background-size: cover; It cannot be a background:size:cover because some of the content are clipped*/
+}
+
+
+footer::after {
+  content:" ";
+  width: 188.001px;
+  height: 289px;
+
+  position:absolute;
+  right:0;
+  bottom: 0;
+
+  background:url("../img/footer-right-leaf.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ */
+
 }
 
 
 .footer-parent {
   height: 142px;
+  
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  
+}
 
-  margin-top:200px;
+
+
+.footer-child-left {
+  margin-left:140px;
+  cursor:pointer; /*The cursor property specifies the mouse cursor to be displayed when pointing over an element.*/
+}
+
+
+
+.footer-child-right {
+  margin:30px 120px 0px 0px;
+
+}
+
+.footer-child-right span,
+.footer-child-right p {
+  cursor: pointer;
+  transition:all 0.15s;
+}
+
+.footer-child-right span:hover,
+.footer-child-right p:hover {
+  transform: scale(1.2) translate(-5px);
+}
+
+.footer-child-right span:active,
+.footer-child-right p:active {
+ opacity:0.8;
+}
+
+
+button {
+  transition: all 0.15s;
+}
+
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+
+}
+
+
+button:active {
+  opacity: 0.7;
 }
 
 
