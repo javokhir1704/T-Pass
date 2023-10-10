@@ -223,21 +223,22 @@
 }
 
 
+section.info {
+  margin-bottom: 100px;
+}
+
+
 .info__cards {
   display: flex;
   align-items: center;
+  justify-content: center;
   column-gap: 52px;
 
-  padding: 0px 37px 20px 15px;
+  /* padding: 0px 37px 20px 15px; */
   margin:100px auto 40px;  
 }
-/* 
-.info__card{
 
 
-
-
-} */
 
 
 .info__card-icon{
@@ -290,7 +291,7 @@ section.work{
 .work-cards {
   display: flex;
   align-items: top;
-  justify-content: right;
+  justify-content:right;
 
   border-radius: 50px;
   background: #F4F5F6;
@@ -561,6 +562,10 @@ section.gifts-orders {
   background: #F0F0F2;
 
   margin-right:20px;
+
+  font-size:18px; /*This is for input text*/
+
+  outline:none;
 }
 
 
@@ -572,6 +577,11 @@ section.gifts-orders {
   font-style: normal;
   font-weight: 700;
   line-height: 21.6px; /* 120% */
+}
+
+
+.input-button form input:focus {
+  border:1px solid #00CCCC;
 }
 
 
